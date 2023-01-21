@@ -19,7 +19,7 @@ const PostFooter = () => {
           {t.LAYOUT.NOTICE_TEXT}
         </div>
         <div className='flex flex-wrap gap-3'>
-          {BLOG.showWeChatPay && (
+          {(
             <button
               onClick={() => setShowPay((showPay) => !showPay)}
               className='flex gap-1 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-sm rounded-lg px-4 py-2'
@@ -39,6 +39,7 @@ const PostFooter = () => {
       </div>
       {showPay && <WechatPay />}
     </div>
+
   )
 }
 

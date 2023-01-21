@@ -1,10 +1,10 @@
 const BLOG = {
   title: 'um.dom.dev',
-  author: '左蓝',
-  email: 'i@zuolan.me',
-  link: 'https://zuolan.me',
+  // author: '左蓝',
+  // email: 'i@zuolan.me',
+  // link: 'https://zuolan.me',
   newsletter: 'Weekly',
-  description: 'Блог про УМ, про ДОМ, про DEV.',
+  description: 'Про УМ, про ДОМ, про DEV.',
   lang: 'ru-RU', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
@@ -33,7 +33,7 @@ const BLOG = {
     telegram: 'https://t.me/Boo1ka'
   },
   seo: {
-    keywords: ['Notionic', 'Blog'],
+    keywords: ['Notionic', 'Blog', 'Smart', 'Home', 'Assistant'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
   },
   notionPageId: process.env.NOTION_PAGE_ID, // DO NOT CHANGE THIS! Edit .env file!

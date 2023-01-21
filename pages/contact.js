@@ -1,5 +1,5 @@
 import Container from '@/components/Container'
-import ContactForm from '@/components/ContactForm'
+// import ContactForm from '@/components/ContactForm'
 import BLOG from '@/blog.config'
 import { lang } from '@/lib/lang'
 import { useRouter } from 'next/router'
@@ -26,7 +26,7 @@ export const Contact = () => {
           </a>
         </p>
       </div>
-      <ContactForm />
+      {/* <ContactForm /> */}
     </Container>
   )
 }
