@@ -26,7 +26,7 @@ const BLOG = {
   previewImagesEnabled: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateHost: 'og-zl.vercel.app', // The link to generate OG image, don't end with a slash
-  // defaultCover: '/cover.jpg',
+  defaultCover: '/cover.jpg',
   socialLink: {
     // twitter: 'https://twitter.com/izuolan',
     github: 'https://github.com/Boo1ka',
