@@ -1,15 +1,15 @@
-import BLOG from '@/blog.config'
-import Link from 'next/link'
+// import BLOG from '@/blog.config'
+// import Link from 'next/link'
 import Avatar from './NotionAvatar.js'
 import Social from '../Common/Social.js'
-import { lang } from '@/lib/lang'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
-import {
-  MailIcon,
-  RssIcon,
-  ClipboardCheckIcon
-} from '@heroicons/react/outline'
+// import { lang } from '@/lib/lang'
+// import { useRouter } from 'next/router'
+// import { useState } from 'react'
+// import {
+//   MailIcon,
+//   RssIcon,
+//   ClipboardCheckIcon
+// } from '@heroicons/react/outline'
 import dynamic from 'next/dynamic'
 import { NotionRenderer } from 'react-notion-x'
 
@@ -18,17 +18,17 @@ const Collection = dynamic(() =>
 )
 
 const Hero = ({ blockMap }) => {
-  const [showCopied, setShowCopied] = useState(false)
-  const { locale } = useRouter()
-  const t = lang[locale]
+  // const [showCopied, setShowCopied] = useState(false)
+  // const { locale } = useRouter()
+  // const t = lang[locale]
 
-  const clickCopy = async () => {
-    setShowCopied(true)
-    navigator.clipboard.writeText(BLOG.link + '/feed')
-    setTimeout(() => {
-      setShowCopied(false)
-    }, 1000)
-  }
+  // const clickCopy = async () => {
+  //   setShowCopied(true)
+  //   navigator.clipboard.writeText(BLOG.link + '/feed')
+  //   setTimeout(() => {
+  //     setShowCopied(false)
+  //   }, 1000)
+  // }
 
   return (
     <>
