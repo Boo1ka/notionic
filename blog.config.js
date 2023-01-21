@@ -4,7 +4,7 @@ const BLOG = {
   email: 'test@mail.com',
   link: 'https://test.ru',
   newsletter: 'Weekly',
-  description: 'A static blog build on top of Notion and Next.js',
+  description: 'Блог об попытке создать умный дом',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
