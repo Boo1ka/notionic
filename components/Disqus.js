@@ -1,13 +1,19 @@
 import { DiscussionEmbed } from 'disqus-react'
 
-<DiscussionEmbed
-  shortname='um-dom-dev'
-  config={
-    {
-      url: 'umdom-git-dev-boo1ka.vercel.app/' + this.props.post.slug,
-      identifier: this.props.post.id,
-      title: this.props.post.title,
-      language: 'ru-RU' // e.g. for Traditional Chinese (Taiwan)
-    }
+const DisqusComments = ({ post }) => {
+  const disqusShortname = "um-dom-dev"
+  const disqusConfig = {
+    url: 'umdom-git-dev-boo1ka.vercel.app/' + post.slug,
+    identifier: post.id, // Single post id
+    title: post.title // Single post title
   }
-/>
+  return (
+    <div>
+      <DiscussionEmbed
+        shortname={disqusShortname}
+        config={disqusConfig}
+      />
+    </div>
+  )
+}
+export default DisqusComments;

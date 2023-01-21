@@ -1,6 +1,6 @@
 import Container from '@/components/Container'
 import BlogPost from '@/components/BlogPost'
-import DiscussionEmbed from '@/components/Disqus'
+import DisqusComments from '@/components/Disqus'
 import NewsletterHero from '@/components/Hero/Newsletter'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
@@ -35,7 +35,7 @@ const newsletter = ({ posts, blockMap }) => {
       {posts.map((post) => (
         <>
           <BlogPost key={post.id} post={post} />
-          <DiscussionEmbed post={post} />
+          <DisqusComments post={post} />
         </>
       ))}
     </Container>
