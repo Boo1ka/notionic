@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import WechatPay from '@/components/Post/WechatPay'
 import { MailIcon, ThumbUpIcon } from '@heroicons/react/outline'
 
-import { DiscussionEmbed } from 'disqus-react';
+import { DiscussionEmbed } from 'disqus-react'
 
 <DiscussionEmbed
   shortname='um-dom-dev'
