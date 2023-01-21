@@ -1,5 +1,6 @@
 import Container from '@/components/Container'
 import BlogPost from '@/components/BlogPost'
+import DiscussionEmbed from '@/components/Disqus'
 import NewsletterHero from '@/components/Hero/Newsletter'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
@@ -32,7 +33,10 @@ const newsletter = ({ posts, blockMap }) => {
     <Container title={BLOG.newsletter} description={BLOG.description}>
       <NewsletterHero blockMap={blockMap} />
       {posts.map((post) => (
-        <BlogPost key={post.id} post={post} />
+        <>
+          <BlogPost key={post.id} post={post} />
+          <DiscussionEmbed post={post} />
+        </>
       ))}
     </Container>
   )
