@@ -9,10 +9,10 @@ import { NotionRenderer } from 'react-notion-x'
 import { getPageTitle } from 'notion-utils'
 
 import Aside from '@/components/Post/Aside'
-import Comments from '@/components/Post/Comments'
 import Container from '@/components/Container'
 import PostFooter from '@/components/Post/PostFooter'
 import TagItem from '@/components/Common/TagItem'
+import DisqusComments from '@/components/Disqus'
 
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 import { motion } from 'framer-motion'
@@ -94,8 +94,7 @@ function delRepeatCode(codeCopy, subPage) {
   const length = codeEnd.childNodes.length
   const codeLast = codeEnd.lastChild
   const codeSecondLast = codeEnd.childNodes[length - 2]
-  // console.log('codeSecondLast', codeSecondLast)
-  // console.log('codeLast', codeLast)
+
   if (subPage && codeEnd.childNodes.length > 1 && codeLast.nodeName === '#text' && codeSecondLast.nodeName === '#text') {
     codeLast.nodeValue = null
   }
@@ -189,7 +188,7 @@ const Layout = ({ children, blockMap, frontMatter, fullWidth = false, subPage = 
       </motion.div>
 
       <PostFooter />
-      <Comments frontMatter={frontMatter} />
+      <DisqusComments post={frontMatter} />
     </Container>
   )
 }
