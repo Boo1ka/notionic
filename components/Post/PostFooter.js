@@ -6,6 +6,20 @@ import { useRouter } from 'next/router'
 import WechatPay from '@/components/Post/WechatPay'
 import { MailIcon, ThumbUpIcon } from '@heroicons/react/outline'
 
+import { DiscussionEmbed } from 'disqus-react';
+
+<DiscussionEmbed
+  shortname='um-dom-dev'
+  config={
+    {
+      url: this.props.article.url,
+      identifier: this.props.article.id,
+      title: this.props.article.title,
+      language: 'ru_RU'
+    }
+  }
+/>
+
 const PostFooter = () => {
   const [showPay, setShowPay] = useState(false)
   const { locale } = useRouter()
@@ -18,8 +32,9 @@ const PostFooter = () => {
         <div className='w-full sm:w-auto max-w-screen-sm inline-block text-sm font-light md:text-base mb-2 sm:mb-0'>
           {t.LAYOUT.NOTICE_TEXT}
         </div>
+        <DiscussionEmbed />
         <div className='flex flex-wrap gap-3'>
-          {(
+          {BLOG.showWeChatPay && (
             <button
               onClick={() => setShowPay((showPay) => !showPay)}
               className='flex gap-1 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500 hover:text-gray-600 dark:hover:text-gray-300 text-sm rounded-lg px-4 py-2'
