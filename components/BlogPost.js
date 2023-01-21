@@ -5,7 +5,7 @@ import formatDate from '@/lib/formatDate'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 
-import DisqusComments from '@/components/Disqus'
+// import DisqusComments from '@/components/Disqus'
 
 const BlogPost = ({ post }) => {
   const { locale } = useRouter()
@@ -34,7 +34,7 @@ const BlogPost = ({ post }) => {
             <p className='font-light hidden md:block leading-8 text-gray-700 dark:text-gray-300'>{post.summary}</p>
             {/* w-4/5  */}
           </div>
-          <DisqusComments post={post} />
+          {/* <DisqusComments post={post} /> */}
         </article>
       </Link>
     </motion.div>
