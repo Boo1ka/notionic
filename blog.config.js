@@ -1,11 +1,11 @@
 const BLOG = {
   title: 'um.dom.dev',
-  author: 'Egor',
-  email: 'test@mail.com',
-  link: 'https://test.ru',
+  author: '左蓝',
+  email: 'i@zuolan.me',
+  link: 'https://zuolan.me',
   newsletter: 'Weekly',
-  description: 'Блог об попытке создать умный дом',
-  lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
+  description: 'Блог про УМ, про ДОМ, про DEV.',
+  lang: 'ru-RU', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'auto', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#F6F8FA', // use hex value, don't forget '#' e.g #fffefc
