@@ -59,7 +59,7 @@ const NewsletterHero = ({ blockMap }) => {
                 </span>
               </button>
             </Link>
-            {showCopied ? (
+            {/* {showCopied ? (
               <button
                 disabled
                 className='bg-gray-200 dark:bg-gray-600 inline-flex py-3 px-5 rounded-lg items-center'
@@ -93,7 +93,7 @@ const NewsletterHero = ({ blockMap }) => {
                   <span className='font-medium'>{t.HERO.NEWSLETTER.RSS_BUTTON}</span>
                 </span>
               </button>
-            )}
+            )} */}
           </div>
         </div>
         <div className='w-1/5'>

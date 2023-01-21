@@ -1,13 +1,3 @@
-// import 'prismjs'
-// import 'prismjs/components/prism-bash'
-// import 'prismjs/components/prism-diff'
-// import 'prismjs/components/prism-go'
-// import 'prismjs/components/prism-yaml'
-// import 'prismjs/components/prism-rust'
-// import 'prismjs/components/prism-javascript'
-// import 'prismjs/components/prism-markup'
-// import 'prismjs/components/prism-typescript'
-// import 'prismjs/themes/prism-tomorrow.min.css' // prism-okaidia.min.css
 import 'react-notion-x/src/styles.css'
 import 'katex/dist/katex.min.css'
 import '@/styles/globals.css'
@@ -33,7 +23,6 @@ function MyApp({ Component, pageProps }) {
 
   useEffect(() => {
     const handleStart = (url) => {
-      // console.log(`Loading: ${url}`)
       NProgress.start()
     }
     const handleStop = () => {
@@ -67,13 +56,12 @@ function MyApp({ Component, pageProps }) {
           fullWidth={pageProps.post ? pageProps.post.fullWidth : false}
         />
         <TransitionEffect>
-            <div
-              className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)] ${
-                BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
+          <div
+            className={`min-h-[calc(100vh-14rem)] md:min-h-[calc(100vh-18rem)] ${BLOG.font === 'serif' ? 'font-serif' : 'font-sans'
               }`}
-            >
-              <Component {...pageProps} />
-            </div>
+          >
+            <Component {...pageProps} />
+          </div>
         </TransitionEffect>
         <Footer fullWidth={pageProps.post ? pageProps.post.fullWidth : false} />
       </ThemeProvider>
