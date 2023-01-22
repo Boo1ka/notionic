@@ -132,69 +132,65 @@ const Layout = ({ children, blockMap, frontMatter, fullWidth = false, subPage = 
   }, [frontMatter, subPageTitle, subPage])
 
   return (
-    <>
-      <Container
-        title={`${frontMatter.title}${showSubPageTitle ? ' | ' + subPageTitle : ''}`}
-        description={frontMatter.summary}
-        // date={new Date(frontMatter.publishedAt).toISOString()}
-        type='article'
-        fullWidth={fullWidth}
-      >
-        <motion.div className='flex flex-row'>
-          <article className='flex-none md:overflow-x-visible overflow-x-scroll w-full'>
-            {showSubPageTitle && (
-              <Link passHref href={`${BLOG.path}/${frontMatter.slug}`} scroll={false}>
-                <a className='text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 transition duration-100'>
-                  <ChevronLeftIcon className='inline-block mb-1 h-5 w-5' />
-                  <span className='m-1'>{frontMatter.title}</span>
-                </a>
-              </Link>
-            )}
-            <h1 className='font-bold text-3xl text-black dark:text-white'>
-              {subPageTitle}
-            </h1>
-            {frontMatter.type[0] !== 'Page' && (
-              <nav className='flex mt-5 mb-10 items-start text-gray-500 dark:text-gray-400'>
-                <div className='mr-2 mb-4 md:ml-0'>
-                  {formatDate(
-                    frontMatter?.date?.start_date || frontMatter.createdTime,
-                    locale
-                  )}
-                </div>
-                {frontMatter.tags && (
-                  <div className='flex flex-nowrap max-w-full overflow-x-auto article-tags'>
-                    {frontMatter.tags.map((tag) => (
-                      <TagItem key={tag} tag={tag} />
-                    ))}
-                  </div>
+    <Container
+      title={`${frontMatter.title}${showSubPageTitle ? ' | ' + subPageTitle : ''}`}
+      description={frontMatter.summary}
+      // date={new Date(frontMatter.publishedAt).toISOString()}
+      type='article'
+      fullWidth={fullWidth}
+    >
+      <motion.div className='flex flex-row'>
+        <article className='flex-none md:overflow-x-visible overflow-x-scroll w-full'>
+          {showSubPageTitle && (
+            <Link passHref href={`${BLOG.path}/${frontMatter.slug}`} scroll={false}>
+              <a className='text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 transition duration-100'>
+                <ChevronLeftIcon className='inline-block mb-1 h-5 w-5' />
+                <span className='m-1'>{frontMatter.title}</span>
+              </a>
+            </Link>
+          )}
+          <h1 className='font-bold text-3xl text-black dark:text-white'>
+            {subPageTitle}
+          </h1>
+          {frontMatter.type[0] !== 'Page' && (
+            <nav className='flex mt-5 mb-10 items-start text-gray-500 dark:text-gray-400'>
+              <div className='mr-2 mb-4 md:ml-0'>
+                {formatDate(
+                  frontMatter?.date?.start_date || frontMatter.createdTime,
+                  locale
                 )}
-              </nav>
-            )}
-            {children}
-            {blockMap && (
-              <div className='-mt-4'>
-                <NotionRenderer
-                  recordMap={blockMap}
-                  mapPageUrl={mapPageUrl}
-                  previewImages={BLOG.previewImagesEnabled}
-                  components={{
-                    Code,
-                    Collection,
-                    nextLink: Link
-                    // nextImage: Image
-                  }}
-                />
               </div>
-            )}
-          </article>
-          <Aside subPageTitle={subPageTitle} frontMatter={frontMatter} />
-        </motion.div>
-
-        <PostFooter />
-        {/* <DisqusComments post={frontMatter} /> */}
-      </Container>
+              {frontMatter.tags && (
+                <div className='flex flex-nowrap max-w-full overflow-x-auto article-tags'>
+                  {frontMatter.tags.map((tag) => (
+                    <TagItem key={tag} tag={tag} />
+                  ))}
+                </div>
+              )}
+            </nav>
+          )}
+          {children}
+          {blockMap && (
+            <div className='-mt-4'>
+              <NotionRenderer
+                recordMap={blockMap}
+                mapPageUrl={mapPageUrl}
+                previewImages={BLOG.previewImagesEnabled}
+                components={{
+                  Code,
+                  Collection,
+                  nextLink: Link
+                  // nextImage: Image
+                }}
+              />
+            </div>
+          )}
+        </article>
+        <Aside subPageTitle={subPageTitle} frontMatter={frontMatter} />
+      </motion.div>
       <DiscussionEmbed shortname={'um-dom-dev'} config={threadConfig} />
-    </>
+      <PostFooter />
+    </Container>
   )
 }
 
