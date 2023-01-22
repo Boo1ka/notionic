@@ -12,7 +12,8 @@ import Aside from '@/components/Post/Aside'
 import Container from '@/components/Container'
 import PostFooter from '@/components/Post/PostFooter'
 import TagItem from '@/components/Common/TagItem'
-import DisqusComments from '@/components/Disqus'
+// import DisqusComments from '@/components/Disqus'
+import { DiscussionEmbed } from 'disqus-react';
 
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 import { motion } from 'framer-motion'
@@ -116,10 +117,11 @@ const Layout = ({ children, blockMap, frontMatter, fullWidth = false, subPage = 
     }
   }
 
-  // console.log('notion page', {
-  //   frontMatter,
-  //   blockMap
-  // })
+  const threadConfig = {
+    url: 'https://umdom-git-dev-boo1ka.vercel.app/' + frontMatter.slug,
+    identifier: frontMatter.id,
+    title: frontMatter.title
+  };
 
   const subPageTitle = getPageTitle(blockMap)
   useEffect(() => {
@@ -188,7 +190,8 @@ const Layout = ({ children, blockMap, frontMatter, fullWidth = false, subPage = 
       </motion.div>
 
       <PostFooter />
-      <DisqusComments post={frontMatter} />
+      <DiscussionEmbed shortname={'um-dom-dev'} config={threadConfig} />
+      {/* <DisqusComments post={frontMatter} /> */}
     </Container>
   )
 }
