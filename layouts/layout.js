@@ -13,7 +13,7 @@ import Container from '@/components/Container'
 import PostFooter from '@/components/Post/PostFooter'
 import TagItem from '@/components/Common/TagItem'
 // import DisqusComments from '@/components/Disqus'
-import { DiscussionEmbed } from 'disqus-react';
+import { DiscussionEmbed } from 'disqus-react'
 
 import { ChevronLeftIcon } from '@heroicons/react/outline'
 import { motion } from 'framer-motion'
@@ -121,7 +121,7 @@ const Layout = ({ children, blockMap, frontMatter, fullWidth = false, subPage = 
     url: 'https://umdom-git-dev-boo1ka.vercel.app/' + frontMatter.slug,
     identifier: frontMatter.id,
     title: frontMatter.title
-  };
+  }
 
   const subPageTitle = getPageTitle(blockMap)
   useEffect(() => {
