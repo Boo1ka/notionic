@@ -12,7 +12,6 @@ import Aside from '@/components/Post/Aside'
 import Container from '@/components/Container'
 import PostFooter from '@/components/Post/PostFooter'
 import TagItem from '@/components/Common/TagItem'
-// import DisqusComments from '@/components/Disqus'
 import { DiscussionEmbed } from 'disqus-react'
 
 import { ChevronLeftIcon } from '@heroicons/react/outline'

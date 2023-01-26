@@ -1,12 +1,12 @@
 const BLOG = {
   title: 'um.dom.dev',
-  // author: '左蓝',
+  author: '左蓝',
   // email: 'i@zuolan.me',
   // link: 'https://zuolan.me',
   newsletter: 'Weekly',
   description: 'Про УМ, про ДОМ, про DEV.',
   lang: 'ru-RU', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
-  appearance: 'auto', // ['light', 'dark', 'auto'],
+  appearance: 'dark', // ['light', 'dark', 'auto'],
   font: 'sans-serif', // ['sans-serif', 'serif']
   lightBackground: '#F6F8FA', // use hex value, don't forget '#' e.g #fffefc
   darkBackground: '#212936', // use hex value, don't forget '#'

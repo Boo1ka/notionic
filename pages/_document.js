@@ -11,7 +11,7 @@ class MyDocument extends Document {
     return (
       <Html lang={BLOG.lang}>
         <Head>
-          <link rel='icon' href='/favicon.ico' />
+          {/* <link rel='icon' href='/favicon.ico' />
           <link rel='icon' href='/favicon.svg' type='image/svg+xml' />
           <link
             rel='apple-touch-icon'
@@ -23,7 +23,7 @@ class MyDocument extends Document {
             type='application/rss+xml'
             title='RSS 2.0'
             href='/feed'
-          ></link>
+          ></link> */}
           {BLOG.appearance === 'auto' ? (
             <>
               <meta
