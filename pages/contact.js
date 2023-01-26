@@ -13,9 +13,9 @@ export const Contact = () => {
         <h2 className='text-xl lg:text-3xl font-light text-center mb-4'>
           {t.CONTACT.TITLE}
         </h2>
-        <p className='max-w-screen-md font-light md:text-lg text-center mx-auto'>
+        {/* <p className='max-w-screen-md font-light md:text-lg text-center mx-auto'>
           {t.CONTACT.DESCRIPTION}
-        </p>
+        </p> */}
         <p className='max-w-screen-md font-light md:text-lg text-center mx-auto'>
           {t.CONTACT.TG_DESCRIPTION}
           <a
